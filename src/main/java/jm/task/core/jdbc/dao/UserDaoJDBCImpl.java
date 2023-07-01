@@ -16,6 +16,7 @@ public class UserDaoJDBCImpl implements UserDao {
     private String getAllUsers = "SELECT ID, NAME, LASTNAME, AGE FROM USER";
     private String cleanUsersTable = "TRUNCATE TABLE USER";
 
+
     public UserDaoJDBCImpl() {
 
     }
