@@ -9,13 +9,13 @@ import java.util.List;
 import static jm.task.core.jdbc.util.Util.getConnection;
 
 public class UserDaoJDBCImpl implements UserDao {
-    private String createUsersTable = "CREATE TABLE IF NOT EXISTS USER (ID BIGINT PRIMARY KEY AUTO_INCREMENT, NAME VARCHAR(45), LASTNAME VARCHAR(45), AGE TINYINT)";
+    private String createUsersTable = "CREATE TABLE IF NOT EXISTS USER (ID BIGINT PRIMARY KEY AUTO_INCREMENT, " +
+            "NAME VARCHAR(45), LASTNAME VARCHAR(45), AGE TINYINT)";
     private String dropUsersTable = "DROP TABLE IF EXISTS USER";
     private String saveUser = "INSERT INTO USER(NAME, LASTNAME, AGE) VALUES(?,?,?)";
     private String removeUserById = "DELETE FROM USER WHERE ID=?";
     private String getAllUsers = "SELECT ID, NAME, LASTNAME, AGE FROM USER";
     private String cleanUsersTable = "TRUNCATE TABLE USER";
-
 
     public UserDaoJDBCImpl() {
 
